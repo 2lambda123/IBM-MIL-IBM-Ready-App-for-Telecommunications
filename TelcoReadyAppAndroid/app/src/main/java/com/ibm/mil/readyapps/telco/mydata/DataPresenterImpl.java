@@ -149,7 +149,7 @@ public class DataPresenterImpl implements DataPresenter {
         Cycle cycle = cycleModel.getDataCycle();
         float newUsed = cycle.getUsed() + usage;
         DecimalFormat df;
-        if(Locale.getDefault().toString().equals("en_US")){
+        if("en_US".equals(Locale.getDefault().toString())){
             df = new DecimalFormat("#.##");
         }
         else{

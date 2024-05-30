@@ -81,7 +81,7 @@ public class PlanOverviewBinder extends DataBinder<PlanOverviewBinder.CurrentPla
     private float getUsedPercentage(Cycle currentCycle){
         float usedPercent = ((currentCycle.getUsed() * 100) / currentCycle.getLimit());
         DecimalFormat df;
-        if(Locale.getDefault().toString().equals("en_US")){
+        if("en_US".equals(Locale.getDefault().toString())){
             df = new DecimalFormat("#.##");
         }
         else{

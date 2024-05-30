@@ -82,7 +82,7 @@ public class CycleBinder extends DataBinder<CycleBinder.CurrentCycleViewHolder> 
     public void bindViewHolder(CurrentCycleViewHolder viewHolder, int position) {
         float usedPercent = ((currentCycle.getUsed() * 100) / currentCycle.getLimit());
         DecimalFormat df ;
-        if(Locale.getDefault().toString().equals("en_US")){
+        if("en_US".equals(Locale.getDefault().toString())){
             df = new DecimalFormat("#.##");
         }
         else{
