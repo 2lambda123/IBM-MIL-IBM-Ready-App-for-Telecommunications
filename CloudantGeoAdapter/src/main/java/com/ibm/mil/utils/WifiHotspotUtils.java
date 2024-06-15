@@ -1,5 +1,6 @@
 package com.ibm.mil.utils;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -46,7 +47,7 @@ public final class WifiHotspotUtils {
 
 	private static GeoJsonPoint randomLocationOffset(double x0, double y0,
 			int radius) {
-		Random random = new Random();
+		Random random = new SecureRandom();
 
 		// Convert radius from meters to degrees
 		double radiusInDegrees = radius / 111000f;

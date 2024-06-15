@@ -6,6 +6,7 @@ import android.location.Location;
 import android.net.Uri;
 
 import com.google.android.gms.maps.model.LatLng;
+import java.security.SecureRandom;
 
 import java.util.Random;
 
@@ -71,7 +72,7 @@ public final class MapUtils {
      * @return the lat/lng of nearby coordinate
      */
     public static LatLng getNearbyCoordinate(LatLng origin, int radius) {
-        Random random = new Random();
+        Random random = new SecureRandom();
 
         // convert radius from meters to degrees
         double radiusInDegrees = radius / 111000f;
